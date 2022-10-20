@@ -1,0 +1,44 @@
+git version
+git init
+git config --global user.name "usuario"
+git config --global user.email "usuario@gmail.com"
+
+git config user.name
+git config user.email
+
+--mostrar información de configuración
+git config --list
+git add . -- git add -A // git add *
+--crear archivo .gitignore para ignorar archivos o carpetas
+git add .gitignore
+git diff 
+git diff prueba.html
+--retornar a working directory
+git rm --cached prueba.html
+git commit -m "mensaje"
+-- clonar repositorio desde github
+git clone https://github.com/proyectosfz/prgit.git
+git remote -v
+git config --list
+git add .
+git commit -m "mensaje"
+git branch -M main
+git remote add origin https://github.com/lfzapatavacesde/pberrio.git
+git push -u origin main
+----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

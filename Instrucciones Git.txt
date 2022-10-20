@@ -1,0 +1,128 @@
+git version
+git init
+git config --global user.name "usuario"
+git config --global user.email "usuario@gmail.com"
+
+git config user.name
+git config user.email
+
+git help pull
+-- cambiar de editor predeterminado, por ejemplo
+git config core.editor notepad
+it config --global core.editor "'C:\Program Files\Sublime Text 3\sublime_text.exe' -w"
+
+--Para establecer main como el nombre de rama predeterminado, haga lo siguiente:
+git config --global init.defaultBranch main
+
+--mostrar información de configuración
+git config --list
+git add . -- git add -A // git add *
+--crear archivo .gitignore para ignorar archivos o carpetas
+git add .gitignore
+git diff 
+git diff prueba.html
+--retornar a working directory
+git rm --cached prueba.html
+git commit -m "mensaje"
+-- clonar repositorio desde github
+git clone https://github.com/proyectosfz/prgit.git
+git remote -v
+git config --list
+git add .
+git commit - m "mensaje"
+git log //git log -p -2 para mostrar mas detallado los 2 ultimos commit
+git log --stat
+git log --pretty=oneline
+git push origin main
+-- o tambien se puede ... git push origin master
+--para mantener la ultimos cambios del repositorio
+git pull origin main // o master
+--Crear una rama
+git branch rama1 // o crearla y pasar a esta git checkout -b rama1
+--cambiar a rama
+git checkout rama1
+git status -s
+-- mostrar todas las ramas *: indica la activa
+git branch
+--cambiar contenido de cualquier archivo
+git add .
+git commit -m "mensaje"
+--actualizar repositorio remoto con la rama1
+git push -u origin rama1
+-- mostrar todas las ramas
+git branch -a // git branch -v
+--retornar a la rama master para combinarla con la rama1
+git checkout main
+-- asegurarnos que tenemos la ultima version
+git pull origin master
+--mostrar las ramas fusionadas a la actual
+git branch --merged 
+--mostar las ramas no fusionadas a la actual
+git branch --no-merged
+--Las ramas no fusionadas no se pueden eliminar con git branch -d testing
+-- combinar la rama1 con master
+git merge rama1
+--subir al servidor (remoto)
+git push origin main // master
+-- es bueno borrar las ramas remotas que no se usarán
+git push origin --delete rama1 // git branch -d rama1
+-- revisar en el repositorio remoto que no exista esta rama
+-- revisar las ramas locales
+git branch -a
+-- quitar la rama del repositorio local (no se recomienda por plan B)
+git branch -d rama1
+-- Resumen:
+-- 1. se pasa a rama main (master)
+-- 2. se hace git pull origin master
+-- 3. se crea rama
+-- 3. se pasa a la rama
+-- 4. se modifica archivo
+-- 5. se agrega a staging area git add .
+-- 6. se hace commit: git commit -m "dfkj"
+-- 7. se hace git push origin otrarama
+-- 8. se pasa a git checkout main
+-- 9. verificar con git branch --merged
+-- 10. git merge otrarama
+-- 11. git push origin main //master
+
+-------------------
+git pull origin main
+--se hacen cambios en un archivo
+git add .
+git commit -m "mensaje"
+--si se olvida un cambio después de un commit
+-- se hace cambio
+git status //se muestra en rojo
+-- se deshacen los cambios (working directory)
+git checkout prueba.html
+-- se hace cambios ...
+git add prueba.html
+git status
+-- para que los cambios de este archivo quede en el anterior commit y se sobreescribe el hash 
+git commit --amend
+-- se digita la nueva información del mensaje (editor vi) // esc tecla i // esc :wq
+git log // se muestra un nuevo hash y el nuevo mensaje
+-- si se quiere mostrar los archivos modificados en cada commit
+git log --stat ///revisar con enter cada commit
+
+--NO realizar
+-- copiar o mover un commit de una rama a otra
+git log // para tomar hash de log de commit que se quiere copiar
+git branch copia //crear rama copia
+git checkout copia // cambiar rama copia
+git branch // confirma que estamos en rama copia
+git cherry-pick 8f5de341fe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
